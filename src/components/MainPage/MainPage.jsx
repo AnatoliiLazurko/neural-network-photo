@@ -24,6 +24,10 @@ const MainPage = () => {
     };
 
     useEffect(() => {
+        requestByUrl();
+    }, [imageUrl]);
+
+    const requestByUrl = () => {
         if (imageUrl) {
             axios.post(endpoint, data, { headers })
                 .then(response => {
@@ -33,24 +37,35 @@ const MainPage = () => {
                     console.error(error);
                 });
         }
-    }, [imageUrl]);
+    }
 
     return (
-        <div className='mainField'>
-            <input
-                placeholder="Enter image URL..."
-                type="text"
-                name="imageUrl"
-                className="input"
-                value={imageUrl}
-                onChange={handleInputChange}
-            />
-            <div>
-                {responseData && responseData.captionResult && (
-                    <div>
-                        <h3>Description of image: {responseData.captionResult.text}</h3>
-                    </div>
-                )}
+        <div className='mainPage'>
+            <div className='neural-left'>
+                <h1>NEURAL NETWORK</h1>
+            </div>
+            
+            <div className='mainField'>
+                <input
+                    placeholder="Enter image URL..."
+                    type="text"
+                    name="imageUrl"
+                    className="input"
+                    value={imageUrl}
+                    onChange={handleInputChange}
+                />
+                <div>
+                    {responseData && responseData.captionResult && (
+                        <div>
+                            <img src={imageUrl} alt="" />
+                            <h2>Description of image: {responseData.captionResult.text}</h2>
+                        </div>
+                    )}
+                </div>
+            </div>
+
+            <div className='neural-right'>
+                <h1>NEURAL NETWORK</h1>
             </div>
         </div>
     );
