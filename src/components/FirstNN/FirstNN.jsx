@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import './MainPageStyles.css';
+import './FirstNNStyles.css';
 import axios from 'axios';
 
 const MainPage = () => {

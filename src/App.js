@@ -1,9 +1,14 @@
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import MainPage from './components/MainPage/MainPage';
+import FirstNN from './components/FirstNN/FirstNN';
+import SecondAI from './components/SecondAI/SecondAI';
 
 function App() {
   return (
-    <MainPage />
+    <Routes>
+      <Route path="/naural-network/first" element={<FirstNN />} />
+      <Route path="/naural-network/second" element={<SecondAI/>} />
+    </Routes>
   );
 }
 

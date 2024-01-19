@@ -1,0 +1,44 @@
+
+
+.btn-analyze {
+    margin-top: 10px;
+    padding: 8px 16px;
+    border: 1px solid #4f4f4f;
+    border-radius: 4px;
+    transition: all 0.2s ease-in;
+    font-size: 19px;
+    cursor: pointer;
+    color: #39bda7;
+}
+
+.btn-analyze:hover {
+    background-color: #39bda7;
+    color: #ffffff;
+    border: 1px solid #39bda7;
+}
+
+.result-section {
+    margin-top: 30px;
+    border-top: 2px solid #39bda7;
+}
+
+.result-section h2 {
+    margin-top: 5px;
+    color: rgb(100, 100, 100);
+}
+
+.result-section p {
+    font-weight: 600;
+}
+
+.positive-txt {
+    color: green;
+}
+
+.neutral-txt {
+    color: rgb(64, 64, 221);
+}
+
+.negative-txt {
+    color: red;
+}
